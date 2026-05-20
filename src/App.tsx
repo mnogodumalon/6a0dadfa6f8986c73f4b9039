@@ -6,7 +6,6 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorBusProvider } from '@/components/ErrorBus';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import { WorkflowPlaceholders } from '@/components/WorkflowPlaceholders';
 import AdminPage from '@/pages/AdminPage';
 import FestplattenherstellerPage from '@/pages/FestplattenherstellerPage';
 import SchraubentypenPage from '@/pages/SchraubentypenPage';
@@ -19,6 +18,7 @@ import PublicFormFestplattenanalyse from '@/pages/public/PublicForm_Festplattena
 // <public:imports>
 // </public:imports>
 // <custom:imports>
+const FestplattenanalyseAssistentPage = lazy(() => import('@/pages/intents/FestplattenanalyseAssistentPage'));
 // </custom:imports>
 
 export default function App() {
@@ -35,13 +35,14 @@ export default function App() {
               {/* <public:routes> */}
               {/* </public:routes> */}
               <Route element={<Layout />}>
-                <Route index element={<><div className="mb-8"><WorkflowPlaceholders /></div><DashboardOverview /></>} />
+                <Route index element={<DashboardOverview />} />
                 <Route path="festplattenhersteller" element={<FestplattenherstellerPage />} />
                 <Route path="schraubentypen" element={<SchraubentypenPage />} />
                 <Route path="chips" element={<ChipsPage />} />
                 <Route path="festplattenanalyse" element={<FestplattenanalysePage />} />
                 <Route path="admin" element={<AdminPage />} />
                 {/* <custom:routes> */}
+                <Route path="intents/festplattenanalyse-assistent" element={<Suspense fallback={null}><FestplattenanalyseAssistentPage /></Suspense>} />
                 {/* </custom:routes> */}
               </Route>
             </Routes>

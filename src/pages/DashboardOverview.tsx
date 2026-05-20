@@ -17,7 +17,7 @@ import {
   IconAlertCircle, IconTool, IconRefresh, IconCheck,
   IconPlus, IconPencil, IconTrash, IconSearch,
   IconDeviceFloppy, IconCpu, IconAdjustments, IconBuildingFactory2,
-  IconCalendar, IconAlertTriangle, IconChartBar, IconX,
+  IconCalendar, IconAlertTriangle, IconChartBar, IconX, IconChevronRight,
 } from '@tabler/icons-react';
 
 const APPGROUP_ID = '6a0dadfa6f8986c73f4b9039';
@@ -105,6 +105,23 @@ export default function DashboardOverview() {
 
   return (
     <div className="space-y-5">
+      {/* Workflow-Navigation */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a
+          href="#/intents/festplattenanalyse-assistent"
+          className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+        >
+          <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+            <IconDeviceFloppy size={20} className="text-primary" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="font-semibold text-sm truncate">Analyse-Assistent</p>
+            <p className="text-xs text-muted-foreground line-clamp-2">Festplatte Schritt für Schritt analysieren: Hersteller, Schrauben, Chips &amp; Fazit dokumentieren</p>
+          </div>
+          <IconChevronRight size={18} className="text-muted-foreground shrink-0" />
+        </a>
+      </div>
+
       {/* KPI-Zeile */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         <StatCard
