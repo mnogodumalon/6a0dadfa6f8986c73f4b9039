@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "forms": [
+    {
+      "entity": "festplattenhersteller",
+      "app_id": "6a0dadd9612901432991c84c",
+      "path": "/rest/apps/6a0dadd9612901432991c84c/records",
+      "allowed_fields": [
+        "hersteller_name",
+        "hersteller_kuerzel",
+        "herkunftsland",
+        "gruendungsjahr",
+        "webseite",
+        "email_kontakt",
+        "anmerkungen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Festplattenhersteller — Formular"
+    },
+    {
+      "entity": "schraubentypen",
+      "app_id": "6a0daddf108135c4775e0889",
+      "path": "/rest/apps/6a0daddf108135c4775e0889/records",
+      "allowed_fields": [
+        "schrauben_bezeichnung",
+        "schrauben_typ",
+        "kopfform",
+        "laenge_mm",
+        "durchmesser_mm",
+        "material",
+        "beschichtung",
+        "schrauben_anmerkungen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Schraubentypen — Formular"
+    },
+    {
+      "entity": "chips",
+      "app_id": "6a0dade03c3e2ec66b6b48dc",
+      "path": "/rest/apps/6a0dade03c3e2ec66b6b48dc/records",
+      "allowed_fields": [
+        "chip_bezeichnung",
+        "chip_hersteller",
+        "chip_funktion",
+        "chip_anzahl",
+        "chip_gehaeuse",
+        "chip_spannung",
+        "chip_takt",
+        "chip_anmerkungen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Chips — Formular"
+    },
+    {
+      "entity": "festplattenanalyse",
+      "app_id": "6a0dade197bb7deffcfef807",
+      "path": "/rest/apps/6a0dade197bb7deffcfef807/records",
+      "allowed_fields": [
+        "modellbezeichnung",
+        "seriennummer",
+        "kapazitaet_gb",
+        "formfaktor",
+        "schnittstelle",
+        "analysedatum",
+        "zustand",
+        "schrauben",
+        "chips",
+        "auffaelligkeiten",
+        "analyse_fazit"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Festplattenanalyse — Formular"
+    }
+  ]
+}

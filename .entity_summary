@@ -1,0 +1,7 @@
+- Festplattenhersteller (festplattenhersteller): hersteller_name[string/text], hersteller_kuerzel[string/text], herkunftsland[string/text], gruendungsjahr[number], webseite[string/url], email_kontakt[string/email], anmerkungen[string/textarea]
+- Schraubentypen (schraubentypen): schrauben_bezeichnung[string/text], schrauben_typ[lookup/select], kopfform[lookup/select], laenge_mm[number], durchmesser_mm[number], material[lookup/select], beschichtung[string/text], schrauben_anmerkungen[string/textarea]
+- Chips (chips): chip_bezeichnung[string/text], chip_hersteller[string/text], chip_funktion[lookup/select], chip_anzahl[number], chip_gehaeuse[string/text], chip_spannung[string/text], chip_takt[string/text], chip_foto[file], chip_anmerkungen[string/textarea]
+- Festplattenanalyse (festplattenanalyse): modellbezeichnung[string/text], seriennummer[string/text], kapazitaet_gb[number], formfaktor[lookup/select], schnittstelle[lookup/select], analysedatum[date/date], zustand[lookup/select], hersteller[applookup/select], schrauben[multipleapplookup/select], chips[multipleapplookup/select], auffaelligkeiten[string/textarea], analyse_foto[file], analyse_fazit[string/textarea]
+  → hersteller links to app_id 6a0dadd9612901432991c84c
+  → schrauben links to app_id 6a0daddf108135c4775e0889
+  → chips links to app_id 6a0dade03c3e2ec66b6b48dc
